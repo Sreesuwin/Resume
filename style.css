@@ -1,0 +1,239 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(135deg, #e3eeff, #f8f9fb);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.resume-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(90deg, #003366, #0072ff);
+  color: #fff;
+  padding: 40px 40px 25px;
+  flex-wrap: wrap;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.header-left img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.header-left h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.tagline {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #d4e5ff;
+  letter-spacing: 0.5px;
+  font-style: italic;
+}
+
+/* ===== HEADER RIGHT ===== */
+.header-right {
+  flex: 1;
+  margin-top: 35px; /* adjusted for perfect alignment */
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+}
+
+.contact-item img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+}
+
+.contact-item img:hover {
+  transform: scale(1.15);
+}
+
+/* ===== LINK STYLE WITH POP-UP EFFECT ===== */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #cce3ff;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 6px rgba(255, 255, 255, 0.2);
+}
+
+/* ===== DOWNLOAD BUTTON ===== */
+.download-btn {
+  display: inline-block;
+  margin-top: 8px; /* moved slightly up */
+  padding: 9px 20px;
+  background-color: #ffffff;
+  color: #003366;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  transition: all 0.25s ease-in-out;
+}
+
+.download-btn:hover {
+  background-color: #00509e;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+}
+
+/* ===== CONTENT ===== */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background: #fdfefe;
+}
+
+.left-section, .right-section {
+  width: 48%;
+}
+
+/* ===== SECTION ===== */
+section {
+  margin-bottom: 25px;
+  background: #ffffff;
+  border-left: 4px solid #0072ff;
+  padding: 18px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  animation: fadeUp 0.7s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #003366;
+  border-bottom: 2px solid #0072ff;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+/* ===== QR SECTION ===== */
+.qr-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 15px;
+}
+
+.qr-container a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.qr-container a img {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #0072ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* ✨ Glow + Lift Effect */
+.qr-container a:hover img {
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(0, 114, 255, 0.6); /* Blue glow */
+  border-color: #0056cc; /* Slightly darker border */
+}
+
+.qr-container p {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 14px;
+  color: #003366;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .header, .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header-right {
+    margin-top: 20px;
+  }
+
+  .left-section, .right-section {
+    width: 100%;
+  }
+
+  section {
+    text-align: left;
+  }
+
+  .download-btn {
+    margin-top: 15px;
+  }
+}
+
+
+
